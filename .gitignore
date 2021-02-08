@@ -1,3 +1,6 @@
+# Swap files
+*.swp
+
 # Python cache and precompiled files
 __pycache__/
 *.py[cod]

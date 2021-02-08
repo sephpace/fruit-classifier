@@ -11,6 +11,8 @@ pytorch-lightning = "^1.1.7"
 torchvision = "^0.8.2"
 Pillow = "^8.1.0"
 matplotlib = "^3.3.4"
+wget = "^3.2"
+kaggle = "^1.5.10"
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.20.0"
