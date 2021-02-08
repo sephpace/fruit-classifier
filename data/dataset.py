@@ -5,9 +5,9 @@ Email:  sephpace@gmail.com
 
 import os
 
+import numpy as np
 from PIL import Image
 from torch.utils.data import Dataset
-from torchvision.transforms.functional import pil_to_tensor
 
 from settings import ROOT_DIR
 
@@ -61,7 +61,7 @@ class Fruits360Dataset(Dataset):
         """
         path, label = self.data[idx]
         img = Image.open(path)
-        tensor = pil_to_tensor(img).double() / 255
+        tensor = torch.as_tensor(np.asarray(img)).float() / 255
         return tensor, label
     
     def __len__(self):
