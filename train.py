@@ -24,7 +24,7 @@ def train():
     Train the fruit classifier model.
     """
     # Set up dataset and data loader
-    dataset = Fruits360Dataset(load_all=True)
+    dataset = Fruits360Dataset()
     loader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=SHUFFLE)
     
     # Set up neural net and training parameters
