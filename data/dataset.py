@@ -7,6 +7,7 @@ import os
 
 import numpy as np
 from PIL import Image
+import torch
 from torch.utils.data import Dataset
 
 from settings import ROOT_DIR
@@ -62,6 +63,7 @@ class Fruits360Dataset(Dataset):
         path, label = self.data[idx]
         img = Image.open(path)
         tensor = torch.as_tensor(np.asarray(img)).float() / 255
+        tensor = tensor.transpose(1, 2).transpose(0, 1)
         return tensor, label
     
     def __len__(self):
