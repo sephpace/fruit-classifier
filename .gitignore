@@ -1,0 +1,8 @@
+# Python cache and precompiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dataset
+data/fruits-360
+
